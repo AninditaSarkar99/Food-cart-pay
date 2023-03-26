@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+
+    <style>
+        .course
+        {
+            width: 25%;
+            float:left;
+        }
+    </style>
+
+</head>
+<body onload="display()">
+
+    <div id="result">
+        
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var courseList = [
+            {
+                "code": 1,
+                "name":"MEAN",
+                "duration":"6 Months",
+                "fees":10000,
+            },
+            {
+                "code": 2,
+                "name":"MERN",
+                "duration":"6 Months",
+                "fees":15000,
+            },
+            {
+                "code": 3,
+                "name":"Java",
+                "duration":"4 Months",
+                "fees":12000,
+            },
+            {
+                "code": 4,
+                "name":"Python",
+                "duration":"2 Months",
+                "fees":5000,
+            }
+        ];
+
+        function display()
+        {
+            var temp = "";
+            for(i=0; i<courseList.length; i++)
+            {
+                temp += '<div class="course">';
+                    temp += '<h3 id="cname">'+courseList[i].name+'</h3>';
+                    temp += '<h2 id="cduration">'+courseList[i].duration+'</h2>';
+                    temp += '<h2 id="cfees">'+courseList[i].fees+'</h2>';
+                    temp += '<button onclick="enroll('+i+')">Enroll</button>';
+                temp += '</div>';
+            }
+            document.getElementById('result').innerHTML = temp;
+        }
+
+        function enroll(index)
+        {
+            //alert(courseList[index].name);
+            var options = {
+                "key": "rzp_test_IHjhWVB52S9e7r", // Enter the Key ID generated from the Dashboard
+                "amount": parseInt(courseList[index].fees)*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                "currency": "INR",
+                "name": courseList[index].name, //your business name
+                "description": courseList[index].duration + " for "+courseList[index].name,
+                "image": "images/pay.jpg",
+                "prefill": {
+                    "name": "Anup Kumar", //your customer's name
+                    "email": "anup@example.com",
+                    "contact": "9123771458"
+                },
+                "handler": function (response){
+                    alert("Thank you. Your Transaction id: "+response.razorpay_payment_id);
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        }
+    </script>
+</body>
+</html>

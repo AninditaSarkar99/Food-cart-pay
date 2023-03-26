@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body onload="display()">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: aliceblue;"><b>Zomato</b></a>
+              <div class="navbar-nav">    
+                <button class="btn btn-primary" onclick="showcart()">view cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+    
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="food_its">
+      <div class="items" id="food">
+         
+        </div>
+        
+        <div id="overlay">
+              
+        </div> 
+        <div id="showlist">
+          <button onclick="closecart()"><span aria-hidden="true">&times;</span></button>
+          <h5 class="middle">Items in your Cart</h5>
+          <hr>
+          <span id="foods">
+           
+          </span>
+        </div>
+         
+    </div>
+  
+    
+	<script src="index.js"></script>
+  </body>
+</html>

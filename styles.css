@@ -1,0 +1,129 @@
+body{
+   background-color: rgba(0, 0, 0, 0.658);
+   background-image: url('https://wallpaperaccess.com/full/276233.jpg');
+   background-size: cover;
+   
+   
+}
+
+.update{
+    float: right;
+    padding: 5px;
+}
+a .navbar-brand{
+    color: aliceblue;
+}
+
+.items{
+    height: fit-content;
+    width: fit-content;
+}
+.course{ 
+    float: left;
+    box-shadow: 1px 2px 2px 2px orangered;
+    margin-top: 15px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 10%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+img{
+    width: 40%;
+    height: 30%;
+    border-radius: 10px;
+
+}
+button{
+    float: right;
+}
+i{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cart{
+    position: absolute;
+    margin-top: 580px ;
+    
+}
+.initems{
+    background-color: aliceblue;
+    
+    height:400px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 20px;
+
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 15;
+    visibility: hidden;
+}  
+#showlist{
+    width: 50%;
+    margin-left: 20%;
+    padding: 5px;
+    height: 550px;
+    background-color: rgb(218, 184, 143);
+    border: 3px solid rgb(250, 249, 249);
+    position: absolute;
+    visibility: hidden;
+    z-index: 20;
+    border-radius: 10px;
+    margin-top: 0%;
+} 
+.middle{
+    text-align: center;
+    padding-top: 5px;
+}
+.fd{
+    background-color: aliceblue;
+    border-radius: 5px;
+    height:12%;
+    border: 1px solid black;
+}
+.left{
+    float: left;
+    padding-left: 10px;
+}
+.right{   
+    padding-left: 50px;
+}
+.btn2{
+    background-color: blueviolet;
+    border-radius: 5px;
+    border-color: blueviolet;
+    color: aliceblue;
+}
+.click{
+    size: 20px;
+    float: right;
+}
+#foods{
+    margin-top: 260px;    
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+}
+.amt{
+    float: right;
+}
+#amt{
+    float: right;
+    margin-right: 15px;
+}
+  
+
